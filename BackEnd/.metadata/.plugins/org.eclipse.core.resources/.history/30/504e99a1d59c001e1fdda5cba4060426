@@ -1,0 +1,25 @@
+package com.app.entities;
+
+import java.util.List;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "batch")
+public class BatchEntity extends BaseEntity {
+	
+    @Enumerated(EnumType.STRING)
+    @Column(name = "batch_name", nullable = false)
+    private BatchEnum batchName;
+
+	public BatchEnum getBatchName() {
+		return batchName;
+	}
+
+	public void setBatchName(BatchEnum batchName) {
+		this.batchName = batchName;
+	}
+	
+
+
+}

@@ -1,0 +1,43 @@
+package com.app.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "User")
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+public class User extends BaseEntity {
+
+	@Column(name = "name")
+	private String Name;
+
+	@Column(name = "age")
+	@Min(value = 18, message = "Age must be at least 18")
+	@Max(value = 65, message = "Age must be at most 65")
+	private int age;
+	
+    @Email(message = "Invalid email format")
+    @Column(name = "email", unique = true)
+	private String email;
+	
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "batch_id")
+	private BatchEntity batch;
+
+	
+}

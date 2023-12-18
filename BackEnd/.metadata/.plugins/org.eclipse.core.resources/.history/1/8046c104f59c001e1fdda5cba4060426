@@ -1,0 +1,19 @@
+package com.app.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.app.entities.User;
+
+@Service
+@Transactional
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public User addUser(User user) {
+		
+		
+	}
+
+}

@@ -1,0 +1,73 @@
+package com.app.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "User")
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class User extends BaseEntity {
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public BatchEntity getBatch() {
+		return batch;
+	}
+
+	public void setBatch(BatchEntity batch) {
+		this.batch = batch;
+	}
+
+	@Column(name = "name")
+	private String Name;
+
+	@Column(name = "age")
+	private int age;
+
+	@Column(name = "email", unique = true)
+	private String email;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	private BatchEntity batch;
+	
+
+}

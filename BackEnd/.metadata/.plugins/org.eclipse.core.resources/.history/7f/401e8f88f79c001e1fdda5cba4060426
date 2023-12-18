@@ -1,0 +1,15 @@
+package com.app.dto;
+
+import javax.persistence.Access;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UserDto {
+	@JsonProperty(access = Access.READ_ONLY)
+	private int id;
+	@NotBlank(message = "first name can't be blank!!!")
+	private String name;
+	private int age;
+	private String email;
+	
+}

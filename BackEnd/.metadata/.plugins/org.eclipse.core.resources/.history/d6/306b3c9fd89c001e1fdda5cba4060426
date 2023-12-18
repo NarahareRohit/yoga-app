@@ -1,0 +1,40 @@
+package com.app.service;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale.Category;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.entities.BaseEntity;
+import com.app.repository.BaseEntityRepository;
+
+@Service
+@Transactional
+public class BaseEntityServiceImpl implements BaseEntityService{
+
+	
+	@Autowired
+	private BaseEntityRepository baseentityrepo;
+	
+	
+	
+	
+	
+	 @Override
+	    public List<BaseEntity> initCategories() {
+	        List<BaseEntity> init = new ArrayList<>();
+	        if (categoryRepository.count() == 0) {
+	            Arrays.stream(CategoryNameEnum.values()).forEach(categoryNameEnum -> {
+	                Category category = new Category(categoryNameEnum);
+	                this.categoryRepository.save(category);
+	                init.add(category);
+	            });
+	        }
+	        return init;
+
+}

@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    color: #0c0d0d;
+    border: 1px solid #cf3b3b;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #13b28a;
+  }
+  
+  tr:hover {
+    background-color: #7fbea2;
+  }
+  
+  h2 {
+    color: #674e43;
+  }
+  

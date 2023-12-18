@@ -1,0 +1,6 @@
+package com.app.service;
+
+public interface BaseEntityService {
+
+	public void savebatch();
+}

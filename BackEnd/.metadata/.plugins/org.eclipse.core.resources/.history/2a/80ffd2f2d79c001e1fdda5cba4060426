@@ -1,0 +1,17 @@
+package com.app.init;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+
+import com.app.repository.BaseEntityRepository;
+
+public class Dbinit implements CommandLineRunner {
+	
+	@Autowired
+	private BaseEnti
+
+	@Override
+	public void run(String... args) throws Exception {
+
+	}
+}

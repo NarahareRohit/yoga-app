@@ -1,0 +1,17 @@
+package com.app.dto;
+
+import javax.persistence.Access;
+
+import org.hibernate.validator.constraints.Email;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class UserDto {
+
+	private int id;
+	private String name;
+	private int age;
+	@Email
+	private String email;
+	
+}

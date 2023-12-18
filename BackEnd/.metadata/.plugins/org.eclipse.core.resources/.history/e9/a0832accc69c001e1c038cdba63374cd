@@ -1,0 +1,8 @@
+package com.app.entities;
+
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public class BaseEntity {
+	int Long id;
+}

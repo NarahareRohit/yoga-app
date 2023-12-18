@@ -1,0 +1,22 @@
+package com.app.entities;
+
+import java.util.List;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "batch")
+public class Batch extends BaseEntity {
+	
+//    @Enumerated(EnumType.STRING)
+//    @Column(name = "batch_name", nullable = false)
+//    private BatchEnum batchName;
+	
+	private String batchno;
+	
+	
+	
+    @OneToMany(mappedBy = "batch")
+    private List<User> users;
+
+}
