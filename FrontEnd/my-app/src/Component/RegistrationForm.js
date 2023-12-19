@@ -14,7 +14,7 @@ const RegistrationForm = () => {
     age: '',
     email: '',
     batch: '',
-    paymentStatus: 'COD', // Default value
+    paymentStatus: 'Offline', // Default value
   });
 
   const [errors, setErrors] = useState({});
@@ -118,7 +118,7 @@ const RegistrationForm = () => {
             Online
           </label>
           <label>
-            <input type="radio"   name="paymentStatus" value="oflline" checked={formData.paymentStatus === 'Offline'} onChange={handleInputChange} />
+            <input type="radio"   name="paymentStatus" value="Offline" checked={formData.paymentStatus === 'Offline'} onChange={handleInputChange} />
             Offline
           </label>
         </div>
