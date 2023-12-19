@@ -23,8 +23,8 @@ ReactJS frontend application where users fill valid information.
 
 <b>Prerequisites</b>
 
-java 11+ 
-MySQL
+<p>java 11+ </p>
+<p>MySQL</p>
 
 <b>ER Diagram</b>
 
