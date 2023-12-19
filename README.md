@@ -27,5 +27,6 @@ ReactJS frontend application where users fill valid information.
 <p>MySQL</p>
 
 <b>ER Diagram</b>
+I have two tables user and batch. batch is one side and user is many sides (One batch has many users).
 
 <img src="Capture.PNG"  width="500" height="400"></img>
