@@ -7,7 +7,7 @@ const Admin = () => {
 
   useEffect(() => {
     // Fetch users from the API
-    axios.get('http://localhost:8080/user/all')
+    axios.get('https://backend-yoga-production.up.railway.app/user/add')
       .then(response => {
         setUsers(response.data);
       })
