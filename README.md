@@ -1,3 +1,2 @@
 # yoga-app
-This is Registration form of yoga class
-![Capture](https://github.com/NarahareRohit/yoga-app/assets/71591573/56f2137f-1046-4be0-8828-11fcbbe2de55)
+This is Registration form of yoga class, this is dynamic webapp which react on real time data as well as it is a highly scalable application.This website is totally developed on tech stacks Java, Spring Boot for backend and reactjs for frontend. I have used ORM (Object Relationship Mapping) for database handling using hibernate framework (jdbc).Created Rest API.  
