@@ -57,7 +57,7 @@ const RegistrationForm = () => {
 
     try {
       // Make Axios call to backend API
-      const response = await axios.post('http://localhost:8080/user/add', formData);
+      const response = await axios.post('https://backend-yoga-production.up.railway.app/user/add', formData);
       console.log(response.data);
       setSuccessMessage(response.data.message);
       if (formData.paymentStatus === 'Online') {
